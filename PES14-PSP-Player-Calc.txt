@@ -1,0 +1,170 @@
+PES 2014 PSP - Player Calculations
+
+
+~Possible value
+
+Start,End,Atribute[Value](Info)
+00,31,Player Name[](UTF16-LE)
+32,47,UNIFORM NAME[](UTF16)
+48,49,Commentary Name[1](LE)(65535=---)
+50,50,Separator?[0?](0)
+51,51,Special Player ID?[1?](0=Normal?,1=Club?)
+52,52,Dominant Leg[1](0=R,1=L)
+52,52,Free Kick Type[2](0=1,<>,20=11)
+52,52,Penalty Kick[32](0=1,<>,160=6)
+53,53,Dribble Style[1](0=1,<>,3=4)
+53,53,Drop Kick Style[4](0=1,<>,12=4)
+53,53,Registered Position[16](0=GK,16="",32=SW,<>,192=CF)
+54,54,Offense[1](1=1,<>,99=99)
+54,54,Goalkeeper GK[128]
+55,55,Defense[1](1=1,<>,99=99)
+55,55,Sweeper SW[128]
+56,56,Body Balance[1](1=1,<>,99=99)
+56,56,Center Back CB[128]
+57,57,Stamina[1](1=1,<>,99=99)
+57,57,Side Back SB[128]
+58,58,Top Speed[1](1=1,<>,99=99)
+58,58,Defensive Midfielder DMF[128]
+59,59,Acceleration[1](1=1,<>,99=99)
+59,59,Wing Back WB[128]
+60,60,Responsiveness[1](1=1,<>,99=99)
+60,60,Center Midfielder CMF[128]
+61,61,Agility[1](1=1,<>,99=99)
+61,61,Side Midfielder SMF[128]
+62,62,Dribble Precision[1](1=1,<>,99=99)
+62,62,Attacking Midfielder AMF[128]
+63,63,Dribble Speed[1](1=1,<>,99=99)
+63,63,Wing Forward WF[128]
+64,64,Short Pass Accuracy[1](1=1,<>,99=99)
+64,64,Second Striker SS[128]
+65,65,Short Pass Speed[1](1=1,<>,99=99)
+65,65,Center Forward CF[128]
+66,66,Long Pass Accuracy[1](1=1,<>,99=99)
+66,66,PK Taker*[128]
+67,67,Long Pass Speed[1](1=1,<>,99=99)
+67,67,Center*[128]
+68,68,Shot Accuracy[1](1=1,<>,99=99)
+68,68,Dribbling*[128]
+69,69,Shot Power[1](1=1,<>,99=99)
+69,69,Possession*[128]
+70,70,Shot Technique[1](1=1,<>,99=99)
+70,70,Positioning*[128]
+71,71,Free Kick Accuracy[1](1=1,<>,99=99)
+71,71,Reaction*[128]
+72,72,Swerve[1](1=1,<>,99=99)
+72,72,Playmaker*[128]
+73,73,Header[1](1=1,<>,99=99)
+73,73,Passing*[128]
+74,74,Jump[1](1=1,<>,99=99)
+74,74,Scoring*[128]
+75,75,Teamwork[1](1=1,<>,99=99)
+75,75,1-on-1 Shot*[128]
+76,76,Technique[1](1=1,<>,99=99)
+76,76,Post Player*[128]
+77,77,Aggression[1](1=1,<>,99=99)
+77,77,DF Positioning*[128]
+78,78,Mentality[1](1=1,<>,99=99)
+78,78,Long Shots*[128]
+79,79,Goalkeeping[1](1=1,<>,99=99)
+79,79,Side*[128]
+80,80,Consistency?[1](0=1,<>,7=8)
+80,80,NonDom Leg Usage[8](0=1,<>,56=8)
+80,80,Injury[64](0=C,64=B,128=A)
+81,81,Condition[1](0=1,<>,7=8)
+81,81,NonDom Leg Precision[8](0=1,<>,56=8)
+81,81,Favored Side[64]{RF(0=RS,64=LS,128=L&R)}{LF(0=LS,64=RS,128=L&R)}(Conditioned by Dominant Leg?)
+82,82,1-Touch Pass*[1]
+82,82,Outside Kick*[2]
+82,82,Marking*[4]
+82,82,Sliding*[8]
+82,82,Covering*[16]
+82,82,DF Com*[32]
+82,82,Penalty Stopper*[64]
+82,82,1-on-1 Stopper*[128]
+83,83,Goal Celebration 1[1](0=OFF,1=1,<>,82=82)
+83,83,Special Ability?[128]
+84,84,Goal Celebration 2[1](0=OFF,1=1,<>,82=82)
+84,84,Long Throw*[128]
+85,85,Fame[1](0=-,1=E,2=D,3=C,4=B,5=A,6=S,7=-)(Reset +8?)
+~85,85,[8]
+~85,85,[16]
+~85,85,[32]
+~85,85,[64]
+86,86,Growth Type[1]{Created Player(8=Late Peak,9=Early Peak,10=Late Lasting,11=Standard Lasting,51=Early Lasting,55=Standard,142=Early Lasting)}
+87,87,Growth Player Model?[1](0,<>,7)(Reset +16?)
+~87,87,[16]
+88,88,Height[1](0=148,<>,72=220)
+89,89,Weight[1](40=40,<>,123=123)
+89,89,Shirt[128](0=OFF,128=Untucked)
+90,90,Head Length[16](0=-7,<112=0>,224=+7)
+90,90,Unknown?[1?](1,<>,8)
+~90,90,[2]
+~90,90,[4]
+~90,90,[8]
+91,91,Head Width[1](0=-7,<7=0>,14=+7)
+91,91,Neck Width[16](0=-7,<112=0>,224)
+92,93,Hair Type[1](LE)(Bald to Special 1=1,<>,1044)(Special 2=1,<>,4095?)
+92,93,Eyes Color 2[4096](LE)(0=Black 1,4096=Black 2,8192=Dark Gray 1,12288=Dark Gray 2,16384=Brown 1,20480=Brown 2,24576=Light Blue 1,28672=Light Blue 2,32768=Blue 1,36864=Blue 2,40960=Green 1,45056=Green 2)
+94,94,Hair Color[1](0=Pattern 1,<>,61=Pattern 62,62=RGB)
+94,94,Eyes Color 1[64](0=1,64=2,128=3)
+95,95,Beard Type[1](0=OFF,1=1,<>,116=116)
+95,95,Cap Type[128](0=OFF,128=ON)
+96,96,Beard Color[1](0=1,<>,61=62,62=Same as Hair)
+96,96,Sleeves[64](0=Auto,64=Short-Sleeves,128=Long)
+97,97,Sunglasses Type[1](0=OFF,1=1,2=2)
+97,97,Cleats[16](0=1,<>,128=9)
+97,97,Accesories info?[4?](0,4,8)
+98,99,Wristband[16](LE)(0=OFF,16=R,32=L,48=L&R)
+98,99,Wristband Color[64](LE)(0=1,<>,448=8)
+98,99,Undershorts[32768](LE)(0=OFF,32768=ON)
+98,99,Bandana Info?[2?](0,2,4,8)
+98,99,Bandana Type?[512?](512=Thin?,2560=Tail?,3072=Bold?)
+98,99,Hair Type Special ID?[4096?](0=Normal?,4096=Special 1?,16384=Special 2?)
+100,101,Undershorts Color[1](LE)(0=1,<>,6=7,7=Same As Shorts)
+100,101,Socks[8](LE)(0=1,8=2)
+100,101,Preset Face[16](LE){Created Player Build base(Skin1-1=2144,<>,Skin6-1=17328)}
+102,102,Preset Face ID?[2?](0=Build?,2=Preset?)
+102,102,Hair Color R[4](0=63,<>,252=0)
+103,103,Hair Color G[1](0=63,<>,63=0)
+103,103,Hair Darkness?[64?](0,64,128)
+104,104,Hair Color B[1](0=63,<>,63=0)
+104,104,Tape[64](0=OFF,64=ON)
+104,104,Gloves[128](0=OFF,128=Auto)
+105,105,Neck Lenght[1](0=-7,<7=0>,14=+7)
+105,105,Chest Measurement[16](0=-7,<112=0>,224=+7)
+106,106,Arm Circumference[1](0=-7,<7=0>,14=+7)
+106,106,Waist Circumference[16](0=-7,<112=0>,224=+7)
+107,107,Thigh Circumference[1](0=-7,<7=0>,14=+7)
+107,107,Calf Circumference[16](0=-7,<112=0>,224=+7)
+108,108,Leg Lenght[1](0=-7,<7=0>,14=+7)
+108,108,Shoulder Height[16](0=-7,<112=0>,224=+7)
+109,109,Shoulder Width[1](0=-7,<7=0>,14=+7)
+109,109,Bandana Color[16](0=1,<>,112=8)
+110,110,Sunglasses Color[1](0=1,<>,7=8)
+110,110,Cap Color[8](0=1,<>,56=8)
+111,111,Data Base Origin?[244?](0=Stock Base?,244=Save Data?)
+112,112,Nationality[1](0=AUSTRIA,<>,59=NEW ZEALAND,100=FREE,<>)
+113,113,Age[2](0=15,<>,62=46)
+115,115,Skin Color[1](0=1,<>,5=6)
+115,115,Eyes Type[8](0=1,<>,248=32)
+116,116,Brows Type[1](0=1,<>,31=32)
+116,116,Eyes Position[32](0=+3,<96=0>,192=-3)
+117,119,Eyes Angle[1](LE)(0=+3,<3=0>,6=-3)
+117,119,Eyes Size: Height[8](LE)(0=+3,<24=0>,48=-3)
+117,119,Eyes Size: Width[64](LE)(0=+3,<192=0>,384=-3)
+117,119,Brows Height[512](LE)(0=+3,<1536=0>,3072=-3)
+117,119,Heyebrow Spacing[4096](LE)(0=+3,<12288=0>,24576=-3)
+117,119,Brows Angle[32768](LE)(0=+3,<98304=0>,196608=-3)
+117,119,Cheeks Type[262144](LE)(0=1,<>,1835008=8)
+117,119,Cheeks Shape[2097152](LE)(0=+3,<6291456=0>,12582912=-3)
+120,120,Mouth Type[1](0=1,<>,19=20)
+120,120,Mouth Position[32](0=+3,<96=0>,192=-3)
+121,123,Mouth Size[1](LE)(0=+3,<3=0>,6=-3)
+121,123,Nose Type[8](LE)(0=1,<>,56=8)
+121,123,Nose Width[64](LE)(0=+3,<192=0>,384=-3)
+121,123,Nose Height[512](LE)(0=+3,<1536=0>,3072=-3)
+121,123,Jaw Type[4096](LE)(0=1,<>,28672=8)
+121,123,Jaw Chin[32768](LE)(0=+3,<98304=0>,196608=-3)
+121,123,Jaw Line[262144](LE)(0=+3,<786432=0>,1572864=-3)
+121,123,Face Overall Position[2097152](LE)(0=+3,<6291456=0>,12582912=-3)
+
